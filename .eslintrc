@@ -1,0 +1,54 @@
+{
+	"env": {
+		"browser": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": [
+		"airbnb-typescript",
+		"airbnb/hooks",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:jest/recommended",
+		"plugin:prettier/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "jest", "prettier"],
+	"globals": {
+		"document": true,
+		"JSX": true,
+		"localStorage": true,
+		"window": true
+	},
+	"rules": {
+		"@typescript-eslint/indent": ["warn", "tab"],
+		"@typescript-eslint/no-explicit-any": [
+			"warn",
+			{
+				"ignoreRestArgs": true
+			}
+		],
+		"@typescript-eslint/quotes": ["warn", "double"],
+		"no-mixed-spaces-and-tabs": 1,
+		"no-undef": 2,
+		"object-curly-spacing": ["warn", "always"],
+		"semi": ["warn", "always"],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".ts", ".tsx"]
+			}
+		],
+		"react/jsx-key": "warn",
+		"react/jsx-wrap-multilines": "warn"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"paths": ["src"]
+			}
+		}
+	}
+}
