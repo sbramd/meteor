@@ -24,11 +24,12 @@
 		"eject": "react-scripts eject",
 		"lint:tsx": "eslint --ext .ts,.tsx src --color",
 		"lint:css": "stylelint 'src/**/*.ts'",
-		"format": "prettier --write src/**/*.{ts,tsx,json}",
+		"format": "prettier --write 'src/**/*.{ts,tsx,json}'",
 		"prebuild": "yarn run lint:tsx && yarn run lint:css && rm -rf build",
 		"deploy": "serve -s build -l 4000",
-		"docz:dev": "docz dev --port=4838",
-		"docz:build": "docz build"
+		"docz:dev": "docz dev --typescript --port=4838",
+		"docz:build": "docz build",
+		"docz:serve": "docz build && docz serve"
 	},
 	"eslintConfig": {
 		"extends": [
