@@ -15,7 +15,7 @@
 	"parserOptions": {
 		"project": "./tsconfig.json"
 	},
-	"plugins": ["@typescript-eslint", "jest", "prettier"],
+	"plugins": ["@typescript-eslint", "jest"],
 	"globals": {
 		"document": true,
 		"JSX": true,
