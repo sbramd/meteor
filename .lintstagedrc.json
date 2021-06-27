@@ -1,6 +1,6 @@
 {
 	"src/**/*.{ts,tsx,json}": [
-		"pretty-quick --staged",
+		"yarn run prettier:format",
 		"yarn run lint:tsx",
 		"yarn run lint:css"
 	]
