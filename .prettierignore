@@ -1,5 +1,5 @@
+.docz/*
 build/*
 coverage/*
-.docz/*
 public/*
 src/serviceWorker.ts
