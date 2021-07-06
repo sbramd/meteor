@@ -12,7 +12,8 @@
 		"@types/react-dom": "^17.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-scripts": "4.0.3",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "^4.0.3",
 		"styled-components": "^5.0.1",
 		"typescript": "~4.1.2"
 	},
@@ -24,23 +25,18 @@
 		"test:coverage": "yarn test -- --coverage --watchAll=false",
 		"test:open-coverage": "open ./coverage/lcov-report/index.html",
 		"eject": "react-scripts eject",
-		"lint:tsx": "eslint --ext .ts,.tsx src --color",
-		"lint:css": "stylelint 'src/**/*.ts'",
+		"lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
 		"stylelint:check-config": "stylelint-config-prettier-check",
-		"stylelint:fix": "stylelint 'src/**/*.ts' --fix",
+		"stylelint:check-css": "stylelint 'src/**/*.style.ts'",
+		"stylelint:fix": "stylelint 'src/**/*.style.ts' --fix",
 		"prettier:check": "prettier --check 'src/**/*.{ts,tsx,json}'",
 		"prettier:format": "prettier --write 'src/**/*.{ts,tsx,json}'",
-		"prebuild": "yarn run lint:tsx && yarn run lint:css && rm -rf build",
+		"prebuild": "yarn run lint:check && yarn run stylelint:check-css && rm -rf build",
 		"deploy": "serve -s build -l 4000",
-		"docz:dev": "docz dev --typescript --port=4838",
+		"docz:dev": "docz dev --port=4838",
 		"docz:build": "docz build",
 		"docz:serve": "docz build && docz serve"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
 	},
 	"browserslist": {
 		"production": [

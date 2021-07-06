@@ -1,8 +1,10 @@
+# testing
+coverage/*
+
+# production
 .docz/*
 build/*
-coverage/*
 public/*
-src/react-app-env.d.ts
+
+# app
 src/serviceWorker.ts
-doczrc.js
-gatsby-node.js

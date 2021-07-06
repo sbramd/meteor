@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import App from "App";
-import { GlobalStyle } from "index.styles";
+import { GlobalStyle } from "index.style";
 import * as serviceWorker from "serviceWorker";
 
 ReactDOM.render(

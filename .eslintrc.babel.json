@@ -1,0 +1,46 @@
+{
+	"extends": [
+		"airbnb",
+		"airbnb/hooks",
+		"plugin:jest/recommended",
+		"plugin:prettier/recommended"
+	],
+	"parser": "babel-eslint",
+	"plugins": ["jest"],
+	"rules": {
+		"import/no-default-export": "warn",
+		"import/order": [
+			"warn",
+			{
+				"alphabetize": {
+					"caseInsensitive": true,
+					"order": "asc"
+				},
+				"groups": ["builtin", "external", "internal"],
+				"newlines-between": "always"
+			}
+		],
+		"import/prefer-default-export": "off",
+		"indent": ["warn", "tab"],
+		"max-len": [
+			"warn",
+			{
+				"code": 80
+			}
+		],
+		"no-mixed-spaces-and-tabs": 1,
+		"no-undef": 2,
+		"no-unused-vars": "warn",
+		"object-curly-spacing": ["warn", "always"],
+		"quotes": ["warn", "double"],
+		"react/jsx-key": "warn",
+		"react/jsx-wrap-multilines": "warn",
+		"semi": ["warn", "always"],
+		"sort-imports": [
+			"warn",
+			{
+				"ignoreDeclarationSort": true
+			}
+		]
+	}
+}

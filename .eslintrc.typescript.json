@@ -1,9 +1,5 @@
 {
-	"env": {
-		"browser": true,
-		"jest": true,
-		"node": true
-	},
+	"files": ["**/*.{ts,tsx}"],
 	"extends": [
 		"airbnb-typescript",
 		"airbnb/hooks",
@@ -16,12 +12,6 @@
 		"project": "./tsconfig.json"
 	},
 	"plugins": ["@typescript-eslint", "jest"],
-	"globals": {
-		"document": true,
-		"JSX": true,
-		"localStorage": true,
-		"window": true
-	},
 	"rules": {
 		"@typescript-eslint/indent": ["warn", "tab"],
 		"@typescript-eslint/no-explicit-any": [
@@ -31,10 +21,28 @@
 			}
 		],
 		"@typescript-eslint/quotes": ["warn", "double"],
+		"import/no-default-export": "warn",
+		"import/order": [
+			"warn",
+			{
+				"alphabetize": {
+					"caseInsensitive": true,
+					"order": "asc"
+				},
+				"groups": ["builtin", "external", "internal"],
+				"newlines-between": "always"
+			}
+		],
+		"import/prefer-default-export": "off",
+		"max-len": [
+			"warn",
+			{
+				"code": 80
+			}
+		],
 		"no-mixed-spaces-and-tabs": 1,
 		"no-undef": 2,
 		"object-curly-spacing": ["warn", "always"],
-		"semi": ["warn", "always"],
 		"react/jsx-filename-extension": [
 			1,
 			{
@@ -42,13 +50,13 @@
 			}
 		],
 		"react/jsx-key": "warn",
-		"react/jsx-wrap-multilines": "warn"
-	},
-	"settings": {
-		"import/resolver": {
-			"node": {
-				"paths": ["src"]
+		"react/jsx-wrap-multilines": "warn",
+		"semi": ["warn", "always"],
+		"sort-imports": [
+			"warn",
+			{
+				"ignoreDeclarationSort": true
 			}
-		}
+		]
 	}
 }

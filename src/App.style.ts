@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
-import { appLogoSpin } from "index.styles";
+
+import { appLogoSpin } from "index.style";
 
 export const AppWrapper = styled.div`
 	text-align: center;

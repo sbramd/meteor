@@ -1,7 +1,7 @@
 {
 	"src/**/*.{ts,tsx,json}": [
 		"yarn run prettier:format",
-		"yarn run lint:tsx",
-		"yarn run lint:css"
+		"yarn run lint:check",
+		"yarn run stylelint:check-css"
 	]
 }

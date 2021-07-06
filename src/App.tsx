@@ -1,5 +1,6 @@
 import React from "react";
-import { AppWrapper, AppHeader, AppLogo, AppPara, AppLink } from "App.styles";
+
+import { AppHeader, AppLink, AppLogo, AppPara, AppWrapper } from "App.style";
 import logo from "logo.svg";
 
 function App(): JSX.Element {
