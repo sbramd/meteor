@@ -13,17 +13,20 @@
 	},
 	"plugins": ["@typescript-eslint", "jest"],
 	"rules": {
-		"@typescript-eslint/indent": ["warn", "tab"],
+		"@typescript-eslint/indent": ["error", "tab"],
 		"@typescript-eslint/no-explicit-any": [
-			"warn",
+			"error",
 			{
 				"ignoreRestArgs": true
 			}
 		],
-		"@typescript-eslint/quotes": ["warn", "double"],
-		"import/no-default-export": "warn",
+		"@typescript-eslint/quotes": ["error", "double"],
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "error",
+		"arrow-body-style": ["error", "as-needed"],
+		"import/no-default-export": "error",
 		"import/order": [
-			"warn",
+			"error",
 			{
 				"alphabetize": {
 					"caseInsensitive": true,
@@ -34,26 +37,22 @@
 			}
 		],
 		"import/prefer-default-export": "off",
-		"max-len": [
-			"warn",
-			{
-				"code": 80
-			}
-		],
-		"no-mixed-spaces-and-tabs": 1,
+		"no-mixed-spaces-and-tabs": 2,
 		"no-undef": 2,
-		"object-curly-spacing": ["warn", "always"],
+		"no-bitwise": 0,
+		"object-curly-spacing": ["error", "always"],
 		"react/jsx-filename-extension": [
-			1,
+			2,
 			{
 				"extensions": [".ts", ".tsx"]
 			}
 		],
-		"react/jsx-key": "warn",
-		"react/jsx-wrap-multilines": "warn",
-		"semi": ["warn", "always"],
+		"react/jsx-key": "error",
+		"react/jsx-wrap-multilines": "error",
+		"react/jsx-props-no-spreading": "off",
+		"semi": ["error", "always"],
 		"sort-imports": [
-			"warn",
+			"error",
 			{
 				"ignoreDeclarationSort": true
 			}

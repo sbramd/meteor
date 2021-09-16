@@ -8,9 +8,10 @@
 	"parser": "babel-eslint",
 	"plugins": ["jest"],
 	"rules": {
-		"import/no-default-export": "warn",
+		"arrow-body-style": ["error", "as-needed"],
+		"import/no-default-export": "error",
 		"import/order": [
-			"warn",
+			"error",
 			{
 				"alphabetize": {
 					"caseInsensitive": true,
@@ -21,23 +22,18 @@
 			}
 		],
 		"import/prefer-default-export": "off",
-		"indent": ["warn", "tab"],
-		"max-len": [
-			"warn",
-			{
-				"code": 80
-			}
-		],
-		"no-mixed-spaces-and-tabs": 1,
+		"indent": ["error", "tab"],
+		"no-mixed-spaces-and-tabs": 2,
 		"no-undef": 2,
-		"no-unused-vars": "warn",
-		"object-curly-spacing": ["warn", "always"],
-		"quotes": ["warn", "double"],
-		"react/jsx-key": "warn",
-		"react/jsx-wrap-multilines": "warn",
-		"semi": ["warn", "always"],
+		"no-unused-vars": "error",
+		"no-bitwise": 0,
+		"object-curly-spacing": ["error", "always"],
+		"quotes": ["error", "double"],
+		"react/jsx-key": "error",
+		"react/jsx-wrap-multilines": "error",
+		"semi": ["error", "always"],
 		"sort-imports": [
-			"warn",
+			"error",
 			{
 				"ignoreDeclarationSort": true
 			}
