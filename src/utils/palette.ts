@@ -10,11 +10,11 @@ export const isValidHex = (color: any): boolean => {
 
 	switch (colorWithoutHash.length) {
 		case 3:
-			return /^[0-9A-F]{3}$/i.test(color);
+			return /^[0-9a-f]{3}$/i.test(colorWithoutHash);
 		case 6:
-			return /^[0-9A-F]{6}$/i.test(color);
+			return /^[0-9a-f]{6}$/i.test(colorWithoutHash);
 		case 8:
-			return /^[0-9A-F]{8}$/i.test(color);
+			return /^[0-9a-f]{8}$/i.test(colorWithoutHash);
 		default:
 			return false;
 	}
@@ -50,11 +50,11 @@ export const buildCssVariablesFromPalette = (paletteMap: { [key: string]: string
 export const buildPaletteFromHexColor = (name: string, value: string): string => {
 	const paletteMap: { [key: string]: string } = {};
 
-	paletteMap[`--color-${name}-900`] = lightenDarkenHexColor(value, 0.2);
-	paletteMap[`--color-${name}-700`] = lightenDarkenHexColor(value, 0.1);
+	paletteMap[`--color-${name}-900`] = lightenDarkenHexColor(value, 2);
+	paletteMap[`--color-${name}-700`] = lightenDarkenHexColor(value, 1);
 	paletteMap[`--color-${name}`] = value;
-	paletteMap[`--color-${name}-300`] = lightenDarkenHexColor(value, -0.1);
-	paletteMap[`--color-${name}-100`] = lightenDarkenHexColor(value, -0.2);
+	paletteMap[`--color-${name}-300`] = lightenDarkenHexColor(value, -1);
+	paletteMap[`--color-${name}-100`] = lightenDarkenHexColor(value, -2);
 
 	return buildCssVariablesFromPalette(paletteMap);
 };

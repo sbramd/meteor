@@ -5,15 +5,13 @@ import WebFont from "webfontloader";
 
 import { Sidebar } from "components";
 import { Dashboard } from "components/atoms/Icon/Dashboard";
-// import { GlobalStyle } from "theme/GlobalStyle";
-import { Theme } from "theme/types";
-import { useTheme } from "theme/useTheme";
+import { Theme, useTheme } from "theme";
+import { GlobalStyle } from "theme/GlobalStyle";
 
 export const App = (): JSX.Element => {
 	const [theme, isThemeLoaded, setThemeMode, setThemeData, getThemeFont] = useTheme();
 
 	useEffect(() => {
-		console.log("did mount");
 		WebFont.load({
 			google: {
 				families: [`${getThemeFont()}:300,400,700`]
@@ -23,7 +21,7 @@ export const App = (): JSX.Element => {
 
 	return isThemeLoaded ? (
 		<ThemeProvider theme={theme as Theme}>
-			{/* <GlobalStyle /> */}
+			<GlobalStyle />
 			<Router>
 				<Sidebar>
 					<Sidebar.Item to="/">

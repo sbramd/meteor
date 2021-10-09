@@ -1,4 +1,4 @@
-import * as styled from "styled-components/macro";
+import * as styled from "styled-components";
 
 import { Theme } from "theme/types";
 import { buildPaletteFromHexColor } from "utils";
@@ -8,17 +8,17 @@ export const GlobalStyle = styled.createGlobalStyle<{ theme: Theme }>`
 
 	:root {
 		/* C O L O R S */
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.primary, "primary")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.black, "dark")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.white, "light")}
-    ${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.black, "black")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.blue, "blue")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.green, "green")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.grey, "grey")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.purple, "purple")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.red, "red")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.white, "white")}
-		${({ theme }): string => buildPaletteFromHexColor(theme.data.colors.yellow, "yellow")}
+		${({ theme }): string => buildPaletteFromHexColor("primary", theme.data.colors.primary)}
+		${({ theme }): string => buildPaletteFromHexColor("dark", theme.data.colors.black)}
+		${({ theme }): string => buildPaletteFromHexColor("light", theme.data.colors.white)}
+    ${({ theme }): string => buildPaletteFromHexColor("black", theme.data.colors.black)}
+		${({ theme }): string => buildPaletteFromHexColor("blue", theme.data.colors.blue)}
+		${({ theme }): string => buildPaletteFromHexColor("green", theme.data.colors.green)}
+		${({ theme }): string => buildPaletteFromHexColor("grey", theme.data.colors.grey)}
+		${({ theme }): string => buildPaletteFromHexColor("purple", theme.data.colors.purple)}
+		${({ theme }): string => buildPaletteFromHexColor("red", theme.data.colors.red)}
+		${({ theme }): string => buildPaletteFromHexColor("white", theme.data.colors.white)}
+		${({ theme }): string => buildPaletteFromHexColor("yellow", theme.data.colors.yellow)}
 
     /* S P A C I N G */
     --space-unit: ${({ theme }): string => theme.data.spacing.baseUnit}; /* 16px */
